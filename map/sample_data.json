@@ -1,0 +1,237 @@
+{
+    "businesses": [
+        {
+            "id": "G4hjhtA_wQ-tSOGpgGlDjw",
+            "alias": "bajamar-seafood-and-tacos-las-vegas",
+            "name": "Bajamar Seafood & Tacos",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/w8ubB6uYoMeH-pnaBp7y-w/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/bajamar-seafood-and-tacos-las-vegas?adjust_creative=zklC-JfKHxt1qutTCnwI6Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=zklC-JfKHxt1qutTCnwI6Q",
+            "review_count": 639,
+            "categories": [
+                {
+                    "alias": "tacos",
+                    "title": "Tacos"
+                },
+                {
+                    "alias": "seafood",
+                    "title": "Seafood"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 36.1517421041723,
+                "longitude": -115.151811880799
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "1615 S Las Vegas Blvd",
+                "address2": "",
+                "address3": null,
+                "city": "Las Vegas",
+                "zip_code": "89104",
+                "country": "US",
+                "state": "NV",
+                "display_address": [
+                    "1615 S Las Vegas Blvd",
+                    "Las Vegas, NV 89104"
+                ]
+            },
+            "phone": "+17023314266",
+            "display_phone": "(702) 331-4266",
+            "distance": 1496.1167951902441
+        },
+        {
+            "id": "8fFTJBh0RB2EKG53ibiBKw",
+            "alias": "zenaidas-cafe-las-vegas",
+            "name": "Zenaida's Cafe",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/7X2_dUApsiI-WXRQif-QeQ/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/zenaidas-cafe-las-vegas?adjust_creative=zklC-JfKHxt1qutTCnwI6Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=zklC-JfKHxt1qutTCnwI6Q",
+            "review_count": 707,
+            "categories": [
+                {
+                    "alias": "cafes",
+                    "title": "Cafes"
+                },
+                {
+                    "alias": "breakfast_brunch",
+                    "title": "Breakfast & Brunch"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 36.1017406137613,
+                "longitude": -115.100359041651
+            },
+            "transactions": [
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "3430 E Tropicana Ave",
+                "address2": "Ste 32",
+                "address3": null,
+                "city": "Las Vegas",
+                "zip_code": "89121",
+                "country": "US",
+                "state": "NV",
+                "display_address": [
+                    "3430 E Tropicana Ave",
+                    "Ste 32",
+                    "Las Vegas, NV 89121"
+                ]
+            },
+            "phone": "+17024763117",
+            "display_phone": "(702) 476-3117",
+            "distance": 5910.195876579457
+        },
+        {
+            "id": "cePE3rCuUOVSCCAHSjWxoQ",
+            "alias": "karved-las-vegas",
+            "name": "Karved",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ZIpxe4nTokp11_CSWgORCg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/karved-las-vegas?adjust_creative=zklC-JfKHxt1qutTCnwI6Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=zklC-JfKHxt1qutTCnwI6Q",
+            "review_count": 640,
+            "categories": [
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                },
+                {
+                    "alias": "tradamerican",
+                    "title": "American (Traditional)"
+                },
+                {
+                    "alias": "salad",
+                    "title": "Salad"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 36.117091,
+                "longitude": -115.138401
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "3957 S Maryland Pkwy",
+                "address2": "",
+                "address3": null,
+                "city": "Las Vegas",
+                "zip_code": "89119",
+                "country": "US",
+                "state": "NV",
+                "display_address": [
+                    "3957 S Maryland Pkwy",
+                    "Las Vegas, NV 89119"
+                ]
+            },
+            "phone": "+17024520275",
+            "display_phone": "(702) 452-0275",
+            "distance": 3222.6627550267985
+        },
+        {
+            "id": "Jjwa-WCK73efAwVZRksWSw",
+            "alias": "pots-las-vegas-3",
+            "name": "POTs",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/okivu3n7DJlSCA_gEUmqbg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/pots-las-vegas-3?adjust_creative=zklC-JfKHxt1qutTCnwI6Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=zklC-JfKHxt1qutTCnwI6Q",
+            "review_count": 290,
+            "categories": [
+                {
+                    "alias": "vegan",
+                    "title": "Vegan"
+                },
+                {
+                    "alias": "egyptian",
+                    "title": "Egyptian"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 36.152118,
+                "longitude": -115.2436044
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1745 S Rainbow Blvd",
+                "address2": "Ste a",
+                "address3": "",
+                "city": "Las Vegas",
+                "zip_code": "89146",
+                "country": "US",
+                "state": "NV",
+                "display_address": [
+                    "1745 S Rainbow Blvd",
+                    "Ste a",
+                    "Las Vegas, NV 89146"
+                ]
+            },
+            "phone": "+17027546200",
+            "display_phone": "(702) 754-6200",
+            "distance": 9628.911988587017
+        },
+        {
+            "id": "AN0bWhisCf6LN9eHZ7DQ3w",
+            "alias": "los-olivos-ristorante-las-vegas",
+            "name": "Los Olivos Ristorante",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/jHZdKMRVUcE8qrm6vMBjnA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/los-olivos-ristorante-las-vegas?adjust_creative=zklC-JfKHxt1qutTCnwI6Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=zklC-JfKHxt1qutTCnwI6Q",
+            "review_count": 219,
+            "categories": [
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                }
+            ],
+            "rating": 5.0,
+            "coordinates": {
+                "latitude": 36.1294751,
+                "longitude": -115.0922237
+            },
+            "transactions": [
+                "pickup",
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "3759 E Desert Inn Rd",
+                "address2": "",
+                "address3": null,
+                "city": "Las Vegas",
+                "zip_code": "89121",
+                "country": "US",
+                "state": "NV",
+                "display_address": [
+                    "3759 E Desert Inn Rd",
+                    "Las Vegas, NV 89121"
+                ]
+            },
+            "phone": "+17028550073",
+            "display_phone": "(702) 855-0073",
+            "distance": 4392.728591216239
+        }
+    ],
+    "total": 5200,
+    "region": {
+        "center": {
+            "longitude": -115.13671875,
+            "latitude": 36.14604126897906
+        }
+    }
+}

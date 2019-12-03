@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions Service</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      
+      /* Optional: Makes the sample page fill the window. */
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel1 {
+        position: absolute;
+        top: 10px;
+        left: 72%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 275px;
+      }
+      #floating-panel2 {
+        position: absolute;
+        top: 60px;
+        left: 72%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 275px;
+      }
+      #floating-panel3 {
+        position: absolute;
+        top: 110px;
+        left: 72%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 275px;
+      }
+      #button-panel {
+        position: absolute;
+        top: 160px;
+        left: 72%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 275px;
+        height: 30px;
+      }
+      #hidden-1 {
+        position: absolute;
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <form action="http://localhost:5000/viz" method="post">
+      <button type="submit">View Visualizations</button>
+    </form>
+
+    <form action="http://localhost:5000/button" id="test-button" method="post">
+      <div id="button-panel">
+        <button type="submit" value="get recs">Create Recommendations</button>
+      </div>
+
+      <div id="floating-panel1">
+        <b>User ID: </b>
+        <select id="selectUser" name="userid">
+          <option value=PKEzKWv_FktMm2mGPjwd0Q>PKEzKWv_FktMm2mGPjwd0Q</option>
+          <option value=3nDUQBjKyVor5wV0reJChg>3nDUQBjKyVor5wV0reJChg</option>
+          <option value=UYcmGbelzRa0Q6JqzLoguw>UYcmGbelzRa0Q6JqzLoguw</option>
+          <option value=n86B7IkbU20AkxlFX_5aew>n86B7IkbU20AkxlFX_5aew</option>
+          <option value=bLbSNkLggFnqwNNzzq-Ijw>bLbSNkLggFnqwNNzzq-Ijw</option>
+        </select> 
+    </div>
+
+    <div id="floating-panel2">
+        <b>Start: </b>
+      <select id="start" name="start_add">
+        <option value=5200+Las+Vegas+Blvd+Las+Vegas+NV>The Las Vegas Sign</option>
+        <option value=5757+Wayne+Newton+Blvd+Las+Vegas+NV>McCarran International Airport</option>
+        
+        <option value=3500+S+Las+Vegas+Blvd+Las+Vegas+NV>Bellagio Hotel and Casino</option>
+        <option value=4505+S+Maryland+Pkwy+Las+Vegas+NV>University of Nevada, LV</option>
+      </select>
+    </div>
+
+    <div id="floating-panel3">
+        <b>End: </b>
+      <select id="end" name="end_add">
+        <option value=500+Fremont+St+Las+Vegas+NV>Fremont Street Experience</option>
+        <option value=1800+W+Charleston+Blvd+Las+Vegas+NV>University Medical Center</option>
+        <option value=2000+S+Las+Vegas+Blvd+Las+Vegas+NV>Stratosphere Casino</option>
+        <option value=5995+E+Vegas+Valley+Dr+Las+Vegas+NV>Royal Links Golf Club</option>
+        <option value=6375+W+Charleston+Blvd+Las+Vegas+NV>College of Southern Nevada</option>
+      </select>
+    </div>
+
+      <div id="hidden-1">
+          <input id="start_1" name="s_lat" type="dispaly:none;" value=0>
+          <input id="start_2" name="s_long" type="dispaly:none;" value=0>
+          <input id="end_1" name="e_lat" type="dispaly:none;" value=0>
+          <input id="end_2" name="e_long" type="dispaly:none;" value=0>
+      </div>
+    
+   </form>
+    
+    <div id="container" style="display:none;"></div>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+
+      // variable used to output to csv
+      var stockData = []
+      var check_files = 0
+      var check = []
+      var data_file = []
+
+     
+
+      // add test start locations
+      var start_locations = []
+      var end_locations = []
+      start_locations.push({name: "The Las Vegas Sign", address: "5200+Las+Vegas+Blvd+Las+Vegas+NV",lat: 36.081937, long: -115.172645})
+      start_locations.push({name: "McCarran International Airport", address: "5757+Wayne+Newton+Blvd+Las+Vegas+NV",lat: 36.086010, long: -115.153969})
+      start_locations.push({name: "North Las Vegas Airport", address: "2730+Airport+Dr+North+Las+Vegas+NV",lat: 36.213257, long: -115.194572})
+      start_locations.push({name: "Bellagio Hotel and Casino", address: "3500+S+Las+Vegas+Blvd+Las+Vegas+NV",lat: 36.115806, long: -115.176097})
+      start_locations.push({name: "University of Nevada, LV", address: "4505+S+Maryland+Pkwy+Las+Vegas+NV",lat: 36.109646, long: -115.142967})
+
+      end_locations.push({name: "Fremont Street Experience", address: "500+Fremont+St+Las+Vegas+NV",lat: 36.16916599, long: -115.139832774})
+      end_locations.push({name: "Royal Links Golf Club", address: "5995+E+Vegas+Valley+Dr+Las+Vegas+NV",lat: 36.136962, long: -115.047737})
+      end_locations.push({name: "University Medical Center", address: "1800+W+Charleston+Blvd+Las+Vegas+NV",lat: 36.160685, long: -115.167593})
+      end_locations.push({name: "Stratosphere Casino", address: "2000+S+Las+Vegas+Blvd+Las+Vegas+NV",lat: 36.147481, long: -115.156020})
+      end_locations.push({name: "College of Southern Nevada", address: "6375+W+Charleston+Blvd+Las+Vegas+NV",lat: 36.155963, long: -115.232456})
+
+      // TESTING FLASK
+      for(var i = 0; i<start_locations.length; i++){
+        temp = document.getElementById('start').value
+        if (start_locations[i]['address']==temp){
+          start_address = start_locations[i]['address']
+          start_lat = start_locations[i]['lat']
+          start_long = start_locations[i]['long']
+        }
+      }
+      
+      // get end lat/long
+      for(var i = 0; i<end_locations.length; i++){
+        temp = document.getElementById('end').value
+        if (end_locations[i]['address']==temp){
+          end_address = end_locations[i]['address']
+          end_lat = end_locations[i]['lat']
+          end_long = end_locations[i]['long']
+        }
+      }
+      selectElement('start_1', start_lat)
+      selectElement('start_2', start_long)
+      selectElement('end_1', end_lat)
+      selectElement('end_2', end_long)
+
+      console.log(window.location.pathname)
+      // read in previous user choice
+      d3.csv("/static/user_choice.csv").then(function(data) {
+        check_files = check_files + 1
+        data.forEach(function(d) {
+          check.push(d)
+          selectElement('selectUser', d['UserID']);
+          selectElement('start', d['Start_Address']);
+          selectElement('end', d['End_Address']);
+          //document.getElementById('selectUser').value=d['UserID']
+          //document.getElementById('start').value=d['Start_Address']
+          //document.getElementById('end').value=d['End_Address']
+        })
+        console.log("TEST")
+      })
+
+      // create google map
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRenderer = new google.maps.DirectionsRenderer();
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 36.1699, lng: -115.172813}
+        });
+        directionsRenderer.setMap(map);
+      
+        // temp removed: don't need onchange handler if exporting file for recommender system
+        var onChangeHandler = function() {
+          // get start lat/long
+          for(var i = 0; i<start_locations.length; i++){
+            temp = document.getElementById('start').value
+            if (start_locations[i]['address']==temp){
+              start_address = start_locations[i]['address']
+              start_lat = start_locations[i]['lat']
+              start_long = start_locations[i]['long']
+            }
+          }
+          
+          // get end lat/long
+          for(var i = 0; i<end_locations.length; i++){
+            temp = document.getElementById('end').value
+            if (end_locations[i]['address']==temp){
+              end_address = end_locations[i]['address']
+              end_lat = end_locations[i]['lat']
+              end_long = end_locations[i]['long']
+            }
+          }
+          selectElement('start_1', start_lat)
+          selectElement('start_2', start_long)
+          selectElement('end_1', end_lat)
+          selectElement('end_2', end_long)
+            
+        //  calculateAndDisplayRoute(directionsService, directionsRenderer);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+
+        // socketio / Flask
+
+        var gmarkers = []
+        var locations = []
+        var titles = []
+
+        d3.csv("/static/data_viz.csv").then(function(data) {
+          check_files = check_files + 1
+          data.forEach(function(d) {
+            locations.push({lat: +d['latitude'], lng: +d['longitude']})
+            titles.push(d['name'])
+            data_file.push(d)
+          })
+
+          plotMarkers(locations, titles, map)
+        })
+        
+        // plot route
+        calculateAndDisplayRoute(directionsService, directionsRenderer);
+      }
+
+      function reloadFile() {
+        d3.csv("/static/data_viz.csv").then(function(data) {
+          temp_file = []
+          data.forEach(function(d) {
+            temp_file.push(d)
+          })
+          if (temp_file != data_file) {
+            window.location = 'http://localhost:5000';
+          }
+        })
+        setTimeout(reloadFile, 3000)
+      }
+
+      function selectElement(id, valueToSelect) {
+        let element = document.getElementById(id);
+        element.value = valueToSelect;
+      }
+
+      function removeMarkers(){
+        for(i = 0; i < gmarkers.length; i++){
+          gmarkers[i].setMap(null);
+        }
+      }
+
+      function plotMarkers(locations, titles, map) {
+        for(i = 0; i < locations.length; i++){
+          var infowindow = new google.maps.InfoWindow();
+          
+          var marker = new google.maps.Marker({position: locations[i], map: map, title: titles[i]});
+
+          google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+            return function(){
+              infowindow.setContent(titles[i]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+
+          google.maps.event.addListener(marker, 'mouseout', function() {
+            infowindow.close();
+          });
+
+          //gmarkers.push(marker);
+      }
+      }
+
+      // calculate route
+      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+        directionsService.route(
+            {
+              origin: {query: document.getElementById('start').value},
+              destination: {query: document.getElementById('end').value},
+              travelMode: 'DRIVING'
+            },
+            function(response, status) {
+              if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+              } else {
+                window.alert('Directions request failed due to ' + status);
+              }
+            });
+      }
+
+      // create CSV file
+      function convertArrayOfObjectsToCSV(args) {
+        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+        data = args.data || null;
+        if (data == null || !data.length) {
+            return null;
+        }
+
+        columnDelimiter = args.columnDelimiter || ',';
+        lineDelimiter = args.lineDelimiter || '\n';
+
+        keys = Object.keys(data[0]);
+
+        result = '';
+        result += keys.join(columnDelimiter);
+        result += lineDelimiter;
+
+        data.forEach(function(item) {
+            ctr = 0;
+            keys.forEach(function(key) {
+                if (ctr > 0) result += columnDelimiter;
+
+                result += item[key];
+                ctr++;
+            });
+            result += lineDelimiter;
+        });
+
+        return result;
+    }
+
+    function downloadCSV(args) {
+        // get start lat/long
+        for(var i = 0; i<start_locations.length; i++){
+          temp = document.getElementById('start').value
+          if (start_locations[i]['address']==temp){
+            start_address = start_locations[i]['address']
+            start_lat = start_locations[i]['lat']
+            start_long = start_locations[i]['long']
+          }
+        }
+        
+        // get end lat/long
+        for(var i = 0; i<end_locations.length; i++){
+          temp = document.getElementById('end').value
+          if (end_locations[i]['address']==temp){
+            end_address = end_locations[i]['address']
+            end_lat = end_locations[i]['lat']
+            end_long = end_locations[i]['long']
+          }
+        }
+
+        // save in dict format fo print to CSV
+        var stockData = [
+          {
+            UserID: document.getElementById('selectUser').value,
+            Start_Address: start_address,
+            Start_Lat: start_lat,
+            Start_Long: start_long,
+            End_Address: end_address,
+            End_Lat: end_lat,
+            End_Long: end_long 
+          }
+        ]
+        
+        var data, filename, link;
+
+        var csv = convertArrayOfObjectsToCSV({
+            data: stockData
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        // add for firefox
+        document.getElementById('container').appendChild(link);
+        link.click();
+    }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvcCSFgy_Qx8AKZp9LvMshZPeWPF1VXgU&callback=initMap">
+    </script>
+  </body>
+</html>

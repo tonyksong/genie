@@ -1,0 +1,263 @@
+9/25/19
+For each paper, answer (a), (b), (c), approximately 1-2 sentences for each letter.
+Answer Heilmeier questions 1 and 2 directly on this google doc.
+Discuss questions 3-9 during next meeting.
+Project: Match 3 top restaurants along route (along with other parameters), and show comparisons with visual analytics.
+Consider using Google for restaurant reviews instead of Yelp to possibly integrate better with Google maps.
+Recommendation algorithm with Spark (timeline: 7-10 days)
+Complex graph idea: show all restaurants, then filter (using ML techniques) based on:
+Route
+Vegetarian, etc.
+Create Overleaf account to work collaboratively on proposal ACM final format (Rohit)
+Next meeting: Wed, 8:00pm PST (10/2/19)
+
+Notes for 10/2/19 Meeting:
+
+Clear problem definition: give a precise formal problem definition, in addition to a jargon-free version (for Heilmeier question #1).
+Provide a plan of activities and time estimates, per group member. List what each group member has done, and will do (by Tues, 10/8)
+Rohit
+Lingqi
+Blaine
+Shinji
+Anthony
+A presentation slide deck via Canvas, called teamXXslides.pdf, where XX is the team number (e.g., team01slides.pdf for team 1). PDF only; no PPT or other formats.
+A 2-minute video presentation (one presentation per team), called teamXXproposal.mp4 (or .avi or .mov), where XX is the team number (e.g., 01 for team 1).
+Filtering restaurants based on user parameters (that we will decide on) will use machine learning techniques.
+Sentiment analysis, content-based filtering should be incorporated.
+
+Action Items:
+Ask on Piazza regarding project scope adjustments as we progress. Does it affect grade, etc. (Rohit)
+Find out format of proposal (how to cite papers, answer Heilmeier questions, etc.) (word limit: 1200)
+Come up with features (Python, research how much time will it take). At most, 8 features.
+Assign tasks (features) for the next meeting.
+
+Next Meeting:
+Wednesday, 10/9, 6-8PM PST
+
+Fill out portion of literature survey (Team)
+Fill out portion of References (Team)
+Use MLA8, verify with easybib.com
+Introduction and Conclusion (Tony)
+“Innovation” in Introduction?
+Presentation Slides (needs to include answers to Heilmeier Questions) (Lingqi)
+UI
+Enter origin and destination
+Show markers of restaurants
+Click restaurant markers to compare and analyze
+Show visualizations underneath markers
+Presentation Video (Tony)
+Project Name Ideas (Shinji)
+Distribution of Team Member Effort
+
+Discussion
+Rohit explains task breakdown
+PART I: Map source and destination using Google Maps API for UI. Give route and provide markers (based on lat. and long.) for found restaurants.
+Learn Google Maps API. Needs to show route in UI.
+Yelp dataset - businesses.json (gives latitude and longitude of each business). Need to map to Google Map.
+Need to find a way to filter out restaurants on that particular route, given source and destination
+PART II: Recommendation system (for example, collaborative filtering (rating-based) vs. content-based filtering (review-based) vs. sentiment analysis (review-based))
+Choose 1 -> Collaborative filtering (Rohit)
+PART III: Statistical Analysis & Visualizations
+
+Next Meeting:
+Friday, 10/11, 8PM PST
+
+Friday, 10/11 Meeting:
+
+Literature Survey: Combine and summarize in one paragraph where possible to satisfy word limit requirement (Team)
+Alphabetize references (tony)
+Figure captions (Lingqi)
+Finish Proposal first, then Presentation by tomorrow.
+
+Next Meeting:
+(Optional) Saturday, 10/12, 7:30PM PST (plan to live submit proposal deliverables)
+
+Saturday, 10/12, 7:30PM PST Meeting
+Submit proposal assignments
+Discuss next meetings, structure of meetings
+Mini-milestones
+Rotate hosts depending on topic (ex. -  Blaine leading Google Maps API and Yelp data integration)
+Wednesday 8:00pm PST 
+Shinji cannot join until 8:30pm PST next week
+Read Progress Report description before meeting
+Next milestone: Progress Report due Friday, 11/8
+
+Next Meeting:
+Wednesday, 10/16, 8:00PM PST
+
+Wednesday, 10/16, 8:00PM PST Meeting
+Progress Report
+(70%) Proposed method
+[10%] Intuition - why should it be better than the state of the art?
+[35%] Description of your approaches: algorithms, user interfaces, etc.
+Integration (may take ~10 days toward the end)
+Yelp Dataset - create sample data (~100 rows per json)
+Each of us can do on our own and work on one of the 3 parts.
+Google Maps part can be done in Javascript
+Yelp dataset contains lat and long coordinates of businesses
+Need algorithm to find restaurants along route based on coordinates
+Come up with options for user filtering
+Limit to US except outer islands
+Limit route distance?
+Directions API: https://developers.google.com/maps/documentation/directions/usage-and-billing
+Maps API: 
+Recommendation System - Python
+Visualization - D3.js?
+Get a time estimate for how long each part will take
+Plan Interface
+Experiments and evaluation
+Training and Test sets
+User studies
+Compare against current products (like Yelp, Google Maps)
+
+[25%] for the design of upcoming experiments / evaluation
+[5%] Description of your testbed; list of questions your experiments are designed to answer
+[25%] Details of the experiments; observations (as many as you can!)
+
+Final Report is due 11/29, 3 weeks after Progress Report
+Total Time left for project: 6 weeks
+HW4 Due 11/15
+
+Wednesday, 10/23/19
+
+Blaine has looked into Google Maps API, seems simple to use with latitude and longitude coordinates
+Show route?
+Static image when marker is clicked
+Recommendation system should output lat and long coordinates from the Yelp dataset
+Take sample of Yelp data and use collaborative filtering
+If there’s time, go into content-based filtering
+Rohit will work on rec system
+Can follow HW3 Q3 format for uploading data into S3
+Do local development first. Once comfortable, then upload into cloud.
+Consider EMR route
+Show visualizations (ex., write javascript in another file) and link to other files
+Decide on what visualizations will be useful (Rohit: 1 bar chart, 1 line chart)
+Try on sample data
+How to query Yelp dataset? Check if something is available
+Yelp Fusion for API: https://www.yelp.com/developers/documentation/v3
+Will not need to store on S3 with API!
+Yelp Dataset documentation: https://www.yelp.com/dataset/documentation/main
+Yelp Dataset examples: https://github.com/Yelp/dataset-examples
+
+Wednesday, 10/30/19
+
+Yelp Dataset is limited. Only has data for few cities and few states. Highest number of reviews: Las Vegas, Phoenix, Toronto
+YelpZip: detecting fake reviews
+Have end-to-end run for POC
+Maybe choose one of the 3 cities above and find routes
+Input for recommendation system (collaborative filtering): split data into training and test set
+Ex. - user.json split into training and test
+Relies on content of user reviews
+Algorithm based on users or restaurants?
+ACTION ITEM: Select algorithm/machine learning technique for recommendation
+Study github links that Rohit sends out
+Study final reports
+Could try different methods and include in “experiments” in report
+5:00pm PDT 5-6pm
+Blaine: Test map of demo
+Lingqi: Basic structure of visualization using csv files outputted from 3 restaurants
+
+Tuesday, 11/5/19
+
+Rohit walks through sample project: 
+Action Item: Everyone try to run this.
+Paper prototype
+Inputs and outputs of recommendation system
+1. First take through recommendation
+If fails because due to sparseness, just query the data with elastic search.
+Try to find city with dense matrix.
+Next meeting: Thursday, 5-6pm
+Progress Report Submission meeting: Sunday, 5-6pm
+Lingqi walks through visualization design plan
+Upper Left: Bar chart of star rating with total reviews as mouseover
+Upper right:
+Lower Left:
+Lower Right:
+Lingqi to update Plan of Activities Timeline
+
+Sunday, 11/10/19
+Progress Report submitted
+
+Wednesday, 11/13/19
+Created Github repository: https://github.gatech.edu/team91-cse6242-fa19/genie
+Rohit walks through end-to-end collaborative filtering recommendation
+Converted json to csv
+Used Las Vegas
+By Friday, Rohit should have better idea of end-to-end flow
+Blaine to have sample map from Vegas by end of week
+Anthony and Lingqi to use array of restaurants to support visualization
+Assume 3 restaurants are returned
+Shinji to work on geographical filter
+i.e., oval filter
+2x a week meetings
+Sunday, 8pm, and Wednesday, 8pm
+
+Sunday, 11/17/19
+Blaine walks through sample maps
+Can select predetermined locations
+Can change color of markers
+Rohit walks through recommender system
+Tried 7 algorithms
+Select best-performing algorithm
+Used ‘surprise’ library
+End-to-end system running
+Will try to implement deep learning method
+Exploratory analysis is more important
+Integrate Blaine and Rohit/Shinji’s work by end of next week
+End-to-end run with all components
+restaurant_id is same as business_id
+Make call to recommend function to return restaurants (3 or more)
+To be returned in an array to integrate with visualizations
+Lingqi walks through visualizations Python code
+Shinji working on geofilter for route component
+
+Wednesday, 11/20/19
+Can we upload Yelp dataset to Github? (Rohit to try it)
+On track for end-to-end run by next meeting on Sunday
+Shinji worked on geofilter. Easy to integrate.
+Rohit will integrate as a post-filter
+Draft final report (Anthony)
+
+Sunday, 11/24/19
+Rohit walks through steps:
+Have json files ready in /data folder
+Run converter.py
+Converts json to csv
+Run pipeline.py
+Generates Las Vegas csv files
+Performs filtering and merges dataframes
+Generates heart of collaborative filtering: LasVegas-reviews-user-business.csv
+Run CrossValidationMapReduce.py
+Generates LasVegas-cv-algos.csv
+Choose algorithm with lowest RMSE
+Uses 276657 data points (for Las Vegas)
+bals performs the best with default parameters
+To do: Perform hyperparameter tuning on each algorithm (Rohit)
+Run recommender.py
+get_best_algo()
+Incorporates geofilter
+Creates LasVegas-recommendations-bals-filtered.csv
+Filters to 91 results
+Note: in main(), uncomment line to run once. Then don’t need to run it again.
+Returns top 3 restaurants
+Stretch Goal: Compile all files in data pipeline in work flow.
+Blaine working on integration
+Tuesday meeting: 4pm 
+Have end-to-end run complete
+Friday meeting: 8pm
+Have final report and poster finished
+(Sunday): 8pm
+Submit final report and poster
+
+Tuesday, 11/26/19
+
+SVD outperformed bals after hyperparameter tuning
+Exploratory data analysis (Rohit)
+Will search existing projects and choose most interesting results/visualizations
+Rohit to create separate function to link output from maps to visualizations
+Maps has pre-determined drop-down selections for demo purposes
+To show in demo: Recommendations along same route change depending on user.
+Blaine to perform exploration on latitude and longitude and users to find optimal examples for demo.
+Next meeting: Friday, 8pm
+Integration and end-to-end run
+Poster and Report

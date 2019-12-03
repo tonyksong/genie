@@ -1,0 +1,1349 @@
+/home/rohit_pegallapati/environments/project_env/bin/python3 /home/rohit_pegallapati/genie/YR/CrossValidationMapReduce.py
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVDpp'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.co_clustering.CoClustering'>
+{'n_cltr_u': 3, 'n_cltr_i': 3, 'n_epochs': 25}
+algo
+<class 'surprise.prediction_algorithms.slope_one.SlopeOne'>
+{}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.NMF'>
+{'n_factors': 20, 'n_epochs': 50}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+{'bsl_options': {'method': 'als', 'n_epochs': 10, 'reg_u': 10, 'reg_i': 15}}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+{'bsl_options': {'method': 'sgd', 'learning_rate': 0.0005}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBaseline'>
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson_baseline', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithMeans'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithZScore'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVDpp'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVDpp'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.NMF'>
+{'n_factors': 20, 'n_epochs': 50}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.NMF'>
+{'n_factors': 20, 'n_epochs': 50}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBasic'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBaseline'>
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson_baseline', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNBaseline'>
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'pearson_baseline', 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithMeans'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithMeans'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithZScore'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.knns.KNNWithZScore'>
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+{'k': 4, 'min_k': 2, 'sim_options': {'name': 'cosine', 'shrinkage': 0, 'user_based': False}}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+{'bsl_options': {'method': 'als', 'n_epochs': 10, 'reg_u': 10, 'reg_i': 15}}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+Estimating biases using als...
+{'bsl_options': {'method': 'als', 'n_epochs': 10, 'reg_u': 10, 'reg_i': 15}}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+{'bsl_options': {'method': 'sgd', 'learning_rate': 0.0005}}
+algo
+<class 'surprise.prediction_algorithms.baseline_only.BaselineOnly'>
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+Estimating biases using sgd...
+{'bsl_options': {'method': 'sgd', 'learning_rate': 0.0005}}
+algo
+<class 'surprise.prediction_algorithms.slope_one.SlopeOne'>
+{}
+algo
+<class 'surprise.prediction_algorithms.slope_one.SlopeOne'>
+{}
+algo
+<class 'surprise.prediction_algorithms.co_clustering.CoClustering'>
+{'n_cltr_u': 3, 'n_cltr_i': 6, 'n_epochs': 25}
+algo
+<class 'surprise.prediction_algorithms.co_clustering.CoClustering'>
+{'n_cltr_u': 3, 'n_cltr_i': 6, 'n_epochs': 25}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+algo
+<class 'surprise.prediction_algorithms.matrix_factorization.SVD'>
+{'n_factors': 50, 'n_epochs': 30, 'lr_all': 0.005, 'reg_all': 0.1}
+svd
+svdpp
+worker :: svd
+pmf
+worker :: svdpp
+cocluster
+worker :: pmf
+slope
+worker :: cocluster
+nmf
+worker :: slope
+bals
+worker :: nmf
+bsdg
+worker :: bals
+knb
+knbci
+worker :: bsdg
+knbp
+worker :: knb
+knnm
+worker :: knbci
+knnzs
+worker :: knbp
+worker :: knnm
+worker :: knnzs
+Estimating biases using sgd...
+Estimating biases using als...
+Computing the cosine similarity matrix...
+Computing the cosine similarity matrix...
+Computing the pearson similarity matrix...
+Estimating biases using als...
+Computing the cosine similarity matrix...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Estimating biases using als...
+Done computing similarity matrix.
+Estimating biases using sgd...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Computing the cosine similarity matrix...
+Computing the pearson similarity matrix...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Estimating biases using als...
+Done computing similarity matrix.
+Estimating biases using sgd...
+Done computing similarity matrix.
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Estimating biases using sgd...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Estimating biases using als...
+Computing the cosine similarity matrix...
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Estimating biases using als...
+Done computing similarity matrix.
+Estimating biases using sgd...
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Estimating biases using als...
+Computing the cosine similarity matrix...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Computing the cosine similarity matrix...
+Computing the cosine similarity matrix...
+Computing the pearson similarity matrix...
+Done computing similarity matrix.
+Done computing similarity matrix.
+Estimating biases using als...
+Done computing similarity matrix.
+Computing the pearson_baseline similarity matrix...
+Done computing similarity matrix.
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+{'bals': test_rmse    1.178337
+test_mae     0.940419
+fit_time     1.376282
+test_time    1.073722
+dtype: float64, 'bsdg': test_rmse    1.227042
+test_mae     0.982747
+fit_time     2.483645
+test_time    0.980921
+dtype: float64, 'knbci': test_rmse    1.367791
+test_mae     1.074097
+fit_time     2.235755
+test_time    2.455879
+dtype: float64, 'slope': test_rmse    1.384196
+test_mae     1.012236
+fit_time     2.029196
+test_time    2.629578
+dtype: float64, 'knnm': test_rmse    1.244208
+test_mae     0.963208
+fit_time     2.567595
+test_time    2.764933
+dtype: float64, 'knnzs': test_rmse    1.247323
+test_mae     0.962524
+fit_time     2.625750
+test_time    2.872991
+dtype: float64, 'knbp': test_rmse    1.367067
+test_mae     1.085745
+fit_time     2.853018
+test_time    2.699485
+dtype: float64, 'knb': test_rmse    1.235246
+test_mae     0.959441
+fit_time     2.916238
+test_time    2.870877
+dtype: float64, 'pmf': test_rmse     1.553759
+test_mae      1.234696
+fit_time     12.117983
+test_time     0.545416
+dtype: float64, 'svd': test_rmse     1.169086
+test_mae      0.928779
+fit_time     12.045759
+test_time     0.618658
+dtype: float64, 'cocluster': test_rmse     1.344705
+test_mae      0.973939
+fit_time     15.595887
+test_time     0.616355
+dtype: float64, 'nmf': test_rmse     1.387741
+test_mae      1.050747
+fit_time     19.655861
+test_time     0.602139
+dtype: float64, 'svdpp': test_rmse     1.171321
+test_mae      0.930938
+fit_time     92.936086
+test_time     1.218295
+dtype: float64}
+svd

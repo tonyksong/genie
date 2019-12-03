@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title> LAT35N Team91 Project </title>
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ url_for('static',filename='styles/project - viz.css') }}"
+    />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+</head>
+
+<body>
+    <form action="http://localhost:5000/map" method="post">
+        <button type="submit">View Map</button>
+    </form>
+
+<div class="container">
+    <div id="upper_left"> <svg class="barChart">  </svg> </div>
+    <div id="upper_right"> <div class="res1"> </div> </div>
+    <div id="lower_left"> <div class="res2"> </div> </div>
+    <div id="lower_right"> <div class="res3"> </div> </div>
+</div>
+
+<script type="text/javascript">
+
+    // ***************************** upper left bar chart *****************************
+
+    var margin0 = { top: 60, right: 50, bottom: 80, left:50 },
+        width0 = 600 - margin0.left - margin0.right,
+        height0 = 300 - margin0.top - margin0.bottom;
+
+    var svg0 = d3.select(".barChart")
+        .append("g")
+        .attr("transform", "translate(" + margin0.left + "," + margin0.top + ")");
+
+    var x = d3.scaleBand().range([0, width0]).padding(0.6)
+    var y = d3.scaleLinear().range([height0, 0])
+
+    d3.csv("/static/data_viz.csv").then(function(data) {
+        data.forEach(function (d) {
+            d['name'] = d['name']
+            d['stars'] = +d['stars']
+            d['price'] = d['price']
+            d['website'] = d['website']
+            d['review_count'] = +d['review_count']
+            d['categories'] = d['categories']
+            d['hours'] = d['hours']
+        })
+        //console.log(data)
+
+        x.domain(data.map(function(d){ return d.name}))
+        y.domain([0, d3.max(data, function(d){return d.stars})])
+
+        var tooltip = d3.tip().offset([60,60])
+            .html(function (d) {
+                return "<div class='tooltip'><p><strong>Rating: " + d.stars +  " stars</strong></p>"
+                    + "<p><strong>Total Reviews: " + d.review_count + "</strong> <p></div>";
+            })
+        svg0.call(tooltip);
+
+        svg0.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", function(d){return x(d.name)})
+            .attr("width", x.bandwidth())
+            .attr("y", function(d){return y(d.stars)})
+            .attr("height", function(d){return height0 - y(d.stars)})
+            .style("fill", "SandyBrown")
+            .on('mouseover', function(d){
+                tooltip.show(d);
+                d3.select(this)
+                    .style('stroke-width', 2)
+                    .style('stroke', 'gold')
+            })
+            .on('mouseout', function(d){
+                tooltip.hide(d);
+                d3.select(this)
+                    .style('stroke-width', 0.5)
+                    .style('stroke', 'black')
+            })
+
+        svg0.append("g")
+            .attr("transform", "translate(0," + height0 + ")")
+            .call(d3.axisBottom(x))
+            .selectAll("text")
+            .style("font-size","13px")
+            .style("font-family", "sans-serif")
+            .style("text-anchor", "middle")
+            .attr("dx", "-0.4em")
+            .attr("dy", "2.2em")
+            .attr("transform", "rotate(-9)")
+
+        svg0.append("g")
+            .call(d3.axisLeft(y))
+            .style("font-size","11px")
+            .style("font-family", "sans-serif")
+
+        svg0.append("g").append("text")
+            .text("Yelp Rating")
+            .attr("x", 160)
+            .attr("y", -35)
+            .style("font-size", "26px")
+            .style("font-family", "Comic Sans MS")
+            .style("font-weight", "bold")
+            .style("fill", "red")
+            .style('stroke', 'orange')
+            .style('stroke-width', 1)
+
+        svg0.append("g").append("text")
+            .text("Number of Stars")
+            .attr("text-anchor", "end")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -35)
+            .attr("x", -80)
+            .attr("text-anchor", "middle")
+            .style("font-size", "15px")
+            .style("font-family", "sans-serif")
+
+    // *************************** viz for each restaurant *********************************
+
+        var div1 = d3.select(".res1"), div2 = d3.select(".res2"), div3 = d3.select(".res3");
+        var divs = [div1, div2, div3]
+
+        for (let i = 0; i < divs.length; i++) {
+
+            // ************************ svg1 - restaurant name and mouseover effect **********************
+            var margin1 = {left: 3, top: 18, right: 3, bottom: 0},
+                width1 =600 - margin1.left - margin1.right,
+                height1 = 30 - margin1.top - margin1.bottom;
+
+            var svg1 = divs[i].append("div").attr("class", "sub1")
+                .append("svg")
+                .attr("width", (width1 + margin1.left + margin1.right))
+                .attr("height", (height1 + margin1.top + margin1.bottom))
+                .append("g")
+                .attr("transform", "translate(" + (width1 / 2 + margin1.left) + "," + (height1 / 2 + margin1.top) + ")");
+
+            var tooltip1 = d3.tip().offset([90, 80])
+                .html(function (d) {
+                    return "<div class='tooltip1'><p><strong> Click the restaurant name to open Yelp page</strong></p></div>";
+                })
+            svg1.call(tooltip1);
+
+            svg1.append("text")
+                .text(data[i].name)
+                .style("font-size", "20px")
+                .style("font-family", "Comic Sans MS")
+                .style("font-weight", "bold")
+                .style("fill", "blue")
+                .style('stroke', 'steelblue')
+                .style('stroke-width', 1)
+                .style('text-decoration','underline')
+                .style("text-anchor", "middle")
+                .on("click", function(){ window.open(data[i].website) })
+                .on('mouseover', function(d){
+                    tooltip1.show(d);
+                    d3.select(this)
+                        .style('stroke', 'purple')
+                })
+                .on('mouseout', function(d){
+                    tooltip1.hide(d);
+                    d3.select(this)
+                        .style('stroke', 'steelblue')
+                })
+
+            // ************************ svg2 - displaying categories **********************
+
+            var margin2 = {left: 3, top: 30, right: 3, bottom: 6},
+                width2 = 280 - margin2.left - margin2.right,
+                height2 = 270 - margin2.top - margin2.bottom;
+
+            var svg2 = divs[i].append("div").attr("class", "sub2")
+                .append("svg")
+                .attr("width", (width2 + margin2.left + margin2.right))
+                .attr("height", (height2 + margin2.top + margin2.bottom))
+                .append("g").attr("class", "wrapper")
+                .attr("transform", "translate(" + (width2 / 2 + margin2.left) + "," + (height2 / 2 + margin2.top) + ")");
+
+            // format categories (convert string to list)
+            var catg_list = data[i].categories.replace("[", "").replace("]", "").replace(new RegExp("'", 'g'), "").split(', ')
+            //console.log(catg_list)
+
+            var donutData =[]
+
+            for (let i = 0; i < catg_list.length; i++) {
+                var catg_dict = {"name": catg_list[i], "value": 10}
+                donutData.push(catg_dict)
+            }
+            //console.log(donutData)
+
+            //Create a color scale
+            var colorScale = d3.scaleLinear()
+                .domain([1,3.5,6])
+                .range(["#2c7bb6", "#ffffbf", "#d7191c"])
+                .interpolate(d3.interpolateHcl);
+
+            //Create an arc function
+            var arc = d3.arc()
+                .innerRadius(width2*0.75/3.5)
+                .outerRadius(width2*0.75/3.5 + 30);
+
+            //Turn the pie chart 90 degrees counter clockwise, so it starts at the left
+            var pie = d3.pie()
+                .startAngle(-90 * Math.PI/180)
+                .endAngle(-90 * Math.PI/180 + 2*Math.PI)
+                .value(function(d) { return d.value; })
+                .padAngle(.01)
+                .sort(null);
+
+            //Create the donut slices
+            svg2.selectAll(".donutArcSlices")
+                .data(pie(donutData))
+                .enter().append("path")
+                .attr("class", "donutArcSlices")
+                .attr("id", function(d,i) { return "donutArc"+i; })
+                .attr("d", arc)
+                .style("fill", function(d,i) {
+                    if(i === 7) return "#CCCCCC"; //Other
+                    else return colorScale(i);
+                })
+
+            //Append the label names on the outside
+            svg2.selectAll(".donutText")
+                .data(donutData)
+                .enter().append("text")
+                .attr("class", "donutText")
+                .attr("dy", -13)
+                .append("textPath")
+                .attr("xlink:href",function(d,i){return "#donutArc"+i;})
+                .text(function(d){return d.name;})
+                .style("font-size", "13px")
+                .style("font-family", "Verdana")
+                //.style("font-weight", "bold")
+                .style("fill", "Coral")
+                .style('stroke', 'gold')
+                .style('stroke-width', 0.5)
+
+            // create a title for the graph
+            svg2.append("text")
+                .text("Food Categories")
+                .style("text-anchor", "middle")
+                .attr("y", -120)
+                .style("font-size", "16px")
+                .style("font-family", "sans-serif")
+                .style("font-weight", "bold")
+                .style("fill", "brown")
+
+            // add price information
+            svg2.append("text")
+                .text('Price')
+                .style("text-anchor", "middle")
+                .attr("y", -10)
+                .style("font-size", "16px")
+                .style("font-family", "Verdana")
+                .style("fill", "green")
+                .style('stroke', 'Olive')
+                .style('stroke-width', 1)
+
+            svg2.append("text")
+                .text(data[i].price)
+                .style("text-anchor", "middle")
+                .attr("y", 18)
+                .style("font-size", "16px")
+                .style("font-family", "Verdana")
+                .style("fill", "green")
+                .style('stroke', 'Olive')
+                .style('stroke-width', 1)
+
+            // ************************ svg3 - displaying business hours **********************
+
+            var margin3 = {left: 3, top: 30, right: 3, bottom: 6},
+                width3 = 280 - margin3.left - margin3.right,
+                height3 = 270 - margin3.top - margin3.bottom;
+
+            var svg3 = divs[i].append("div").attr("class", "sub3")
+                .append("svg")
+                .attr("width", (width3 + margin3.left + margin3.right))
+                .attr("height", (height3 + margin3.top + margin3.bottom + 200))
+                .attr('display','block')
+                .append("g").attr("class", "wrapper")
+                .attr("transform", "translate(" + (width3 / 2 + margin3.left) + "," + (height3 / 2 + margin3.top) + ")")
+
+            // create a title for the graph
+            svg3.append("text")
+                .text("Business Hours")
+                .style("text-anchor", "middle")
+                .attr("y", -120)
+                .style("font-size", "16px")
+                .style("font-family", "sans-serif")
+                .style("font-weight", "bold")
+                .style("fill", "brown")
+
+            // format business hours (convert string to list)
+            var hrs = data[i].hours.replace("[", "").replace("]", "").replace(new RegExp("'", 'g'), "").split(', ')
+            var hrs_length = hrs.unshift("first")   // Insert an item to the beginning of the array. Return array length
+            //console.log(hrs)
+
+            var biz_hrs = svg3.selectAll('text')
+                .data(hrs)
+                .enter()
+                .append('text')
+                .attr('x', 65)
+                .attr('y', function(d, i) { return i * 30 - 120; })
+                .text(function(d) { return d; })
+                .attr('font-size', 12)
+                .attr('text-anchor', 'end');
+
+        }  // end of for loop
+
+    })  //end of read csv function
+
+</script>
+
+</body>
+
+</html>

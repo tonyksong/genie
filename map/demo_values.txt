@@ -1,0 +1,23 @@
+Demo Values
+
+Same Route / Diff Users
+======================
+User: PKEzKWv_FktMm2mGPjwd0Q
+User: UYcmGbelzRa0Q6JqzLoguw
+
+Start: McCarran International Airport
+End: Fremont Street Experience
+=======================
+
+
+Diff Route / Same User
+=======================
+User: 3nDUQBjKyVor5wV0reJChg
+
+Start: UNLV
+End: College of Southern NV
+
+Start: Bellagio Hotel and Casino
+End: Stratosphere Casino
+========================
+
