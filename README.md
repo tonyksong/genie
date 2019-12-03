@@ -13,3 +13,5 @@ LAT35N Team91 CSE6242 Group Project
   d. Run recommender.py<br/>
 
 3. EXECUTION - How to run a demo on your code
+
+Authors: Blaine Davenport, Rohit Pegallapati, Anthony Song, Shinji Ueno, Lingqi Zhang
