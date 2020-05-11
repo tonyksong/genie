@@ -1,5 +1,5 @@
 # genie
-LAT35N Team91 CSE6242 Group Project
+LAT35N Team91 CSE 6242 Group Project
 
 1. DESCRIPTION - Describe the package in a few paragraphs
 2. INSTALLATION - How to install and setup your code<br/>
