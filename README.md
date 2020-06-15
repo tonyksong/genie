@@ -1,4 +1,4 @@
-# genie ![Image of Yaktocat](https://github.com/tonyksong/genie/blob/master/genie_img.png)
+# genie ![Image of Yaktocat](https://github.com/tonyksong/genie/blob/master/genie_img.png =250x)
 ### LAT35N Team91 CSE 6242 Group Project
 
 1. DESCRIPTION<br>
