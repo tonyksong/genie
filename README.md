@@ -1,4 +1,4 @@
-# genie ![Image of Genie](/genie_img.png)<img src="/genie_img.png" width="100" height="100">
+# genie <img src="/genie_img.png" width="100" height="100">
 
 1. DESCRIPTION<br>
 GENIE is a restaurant recommendation tool built with Python, D3.js, and Flask. It uses machine learning techniques to provide customized restaurant recommendations along a user-selected route.
