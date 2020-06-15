@@ -10,7 +10,7 @@ Minimum Computer Requirements:<br>
 -Firefox web browser (v69 or above)<br>
    1. [Download Yelp Dataset](https://www.yelp.com/dataset/download)
    1. Run converter.py
-      1. Converts json to csv
+      1. Converts the *business.json*, *user.json* and *review.json* data from the Yelp Dataset into *.csv* files.
    1. Run pipeline.py
       1. Generates Las Vegas csv files
       1. Performs filtering and merges dataframes
@@ -22,7 +22,7 @@ Minimum Computer Requirements:<br>
 
 1. EXECUTION - How to run a demo on your code
 
-   1. Navigate to /app folder, and run *run.py*
+   1. Navigate to `/app` folder, and run *run.py*
    1. Copy local host 5000 link into Firefox browser and load page
    1. From the drop-down menus, select User ID and Start and End locations
    1. Click "Create Recommendations" button
