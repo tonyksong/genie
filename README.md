@@ -9,7 +9,7 @@ Minimum Computer Requirements:<br>
 -512GB disk<br>
 -Dual-core Core i5<br>
 -Firefox web browser (v69 or above)<br>
-   1. Download Yelp Dataset: https://www.yelp.com/dataset/download
+   1. [Download Yelp Dataset](https://www.yelp.com/dataset/download)
    1. Run converter.py
       1. Converts json to csv
    1. Run pipeline.py
