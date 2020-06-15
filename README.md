@@ -15,15 +15,15 @@ Minimum Computer Requirements:<br>
    1. Run pipeline.py
       1. Generates Las Vegas csv files
       1. Performs filtering and merges dataframes
-      1. Generates heart of collaborative filtering: LasVegas-reviews-user-business.csv
+      1. Generates heart of collaborative filtering: *LasVegas-reviews-user-business.csv*
    1. Run CrossValidationMapReduce.py
       1. Performs CV on algorithms with HP Tuning
-      1. Generates LasVegas-cv-algos.csv
+      1. Generates *LasVegas-cv-algos.csv*
    1. Run recommender.py
 
 1. EXECUTION - How to run a demo on your code
 
-   1. Navigate to /app folder, and run run.py
+   1. Navigate to /app folder, and run *run.py*
    1. Copy local host 5000 link into Firefox browser and load page
    1. From the drop-down menus, select User ID and Start and End locations
    1. Click "Create Recommendations" button
