@@ -1,7 +1,8 @@
 # genie
 ### LAT35N Team91 CSE 6242 Group Project
 
-1. DESCRIPTION - GENIE is a restaurant recommendation tool built with Python, D3.js, and Flask. It uses machine learning techniques to provide customized restaurant recommendations along a user-selected route.
+1. DESCRIPTION<br>
+GENIE is a restaurant recommendation tool built with Python, D3.js, and Flask. It uses machine learning techniques to provide customized restaurant recommendations along a user-selected route.
 1. INSTALLATION<br/>
 Minimum Computer Requirements:
 -8GB RAM
