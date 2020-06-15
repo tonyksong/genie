@@ -1,4 +1,4 @@
-# genie ![Image of Genie](https://github.com/tonyksong/genie/blob/master/genie_img.png =250x250)
+# genie ![Image of Genie](https://github.com/tonyksong/genie/blob/master/genie_img.png){:height="50%" width="50%"}
 ### LAT35N Team91 CSE 6242 Group Project
 
 1. DESCRIPTION<br>
