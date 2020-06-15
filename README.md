@@ -1,5 +1,4 @@
-# genie ![Image of Genie](https://github.com/tonyksong/genie/blob/master/genie_img.png){:height="50%" width="50%"}
-### LAT35N Team91 CSE 6242 Group Project
+# genie <img src=https://github.com/tonyksong/genie/blob/master/genie_img.png" width="400" height="790">
 
 1. DESCRIPTION<br>
 GENIE is a restaurant recommendation tool built with Python, D3.js, and Flask. It uses machine learning techniques to provide customized restaurant recommendations along a user-selected route.
