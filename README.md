@@ -9,15 +9,17 @@ Minimum Computer Requirements:<br>
 -512GB disk<br>
 -Dual-core Core i5<br>
 -Firefox web browser (v69 or above)<br>
-   1. Download Yelp Dataset: https://www.yelp.com/dataset/download<br/>
-   1. Run converter.py<br/>
-     (Converts json to csv)<br/>
-   1. Run pipeline.py<br/>
-   1.   (Generates Las Vegas csv files, Performs filtering and merges dataframes, Generates heart of collaborative filtering:
-     LasVegas-reviews-user-business.csv)<br/>
-   1. Run CrossValidationMapReduce.py<br/>
-     (Performs CV on algorithms with HP Tuning, Generates LasVegas-cv-algos.csv)<br/>
-   1. Run recommender.py<br/>
+   1. Download Yelp Dataset: https://www.yelp.com/dataset/download
+   1. Run converter.py
+      1. Converts json to csv
+   1. Run pipeline.py
+      1. Generates Las Vegas csv files
+      1. Performs filtering and merges dataframes
+      1. Generates heart of collaborative filtering: LasVegas-reviews-user-business.csv
+   1. Run CrossValidationMapReduce.py
+      1. Performs CV on algorithms with HP Tuning
+      1. Generates LasVegas-cv-algos.csv
+   1. Run recommender.py
 
 1. EXECUTION - How to run a demo on your code
 
