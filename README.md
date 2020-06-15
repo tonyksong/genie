@@ -4,11 +4,11 @@
 1. DESCRIPTION<br>
 GENIE is a restaurant recommendation tool built with Python, D3.js, and Flask. It uses machine learning techniques to provide customized restaurant recommendations along a user-selected route.
 1. INSTALLATION<br/>
-Minimum Computer Requirements:
--8GB RAM
--512GB disk
--Dual-core Core i5
--Firefox web browser (v69 or above)
+Minimum Computer Requirements:<br>
+-8GB RAM<br>
+-512GB disk<br>
+-Dual-core Core i5<br>
+-Firefox web browser (v69 or above)<br>
    1. Download Yelp Dataset: https://www.yelp.com/dataset/download<br/>
    1. Run converter.py<br/>
      (Converts json to csv)<br/>
