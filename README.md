@@ -20,7 +20,7 @@ Minimum Computer Requirements:<br>
       1. Generates *LasVegas-cv-algos.csv*
    1. Run recommender.py
 
-1. EXECUTION - How to run a demo on your code
+1. EXECUTION - How to run a demo
 
    1. Navigate to `/app` folder, and run *run.py*
    1. Copy local host 5000 link into Firefox browser and load page
